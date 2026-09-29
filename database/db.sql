@@ -4,11 +4,21 @@ CREATE TABLE doctor (
     lastname VARCHAR(200) ,
     bio VARCHAR(200) 
 );
+INSERT INTO doctor (name , lastname , bio)
+VALUES 
+('Karim' , 'Tahiri ', 'Nothing'),
+('Fahim' , 'SattarZadeh' , 'Hey'),
+('Yama' , 'Naseri ', 'NO');
 CREATE TABLE patient (
     id SERIAL PRIMARY KEY ,
     name VARCHAR(200) NOT NULL ,
     sickness VARCHAR(200)
 );
+INSERT INTO patient (name , sickness)
+VALUES 
+('Karim' , 'Teeth'),
+('Fahim' , 'Foot'),
+('Yama' , 'Back');
 CREATE TABLE medicine (
     id SERIAL PRIMARY KEY ,
     brand_name VARCHAR(500) NOT NULL ,
@@ -34,6 +44,6 @@ CREATE TABLE prescriptionItems (
     price NUMERIC(10,2) ,
     quantity NUMERIC(10,2) ,
     note VARCHAR(200) ,
-    FOREIGN KEY (medicine_id) REFERENCES medicine(id,
+    FOREIGN KEY (medicine_id) REFERENCES medicine(id),
     FOREIGN KEY (prescription_id) REFERENCES prescriptionHeader(id)
 );
