@@ -1,5 +1,3 @@
-const { path } = require("./factory");
-
 const tables = [
   {
     tableName: "doctor",
