@@ -23,5 +23,17 @@ const tables = [
       put: true,
     },
   },
+  {
+    tableName: "medicine",
+    routeName: "/medicine",
+    fields: ["brand_name", "generic", "price", "stock", "usage"],
+    routes: {
+      get: true,
+      get_one: true,
+      post: true,
+      patch: true,
+      put: true,
+    },
+  },
 ];
 module.exports = tables;

@@ -27,6 +27,11 @@ CREATE TABLE medicine (
     stock NUMERIC(10,1) DEFAULT 0 ,
     usage TEXT
 );
+INSERT INTO medicine (brand_name , generic , price , stock , usage)
+VALUES
+('Parol' , 'parectamol' , '100' , '200' , 'cough'),
+('baclofen' , 'parectamol1' , '20' , '500' , 'cough'),
+('Ebobroufen' , 'broof' , '100' , '200' , 'teeth');
 CREATE TABLE prescriptionHeader (
     id SERIAL PRIMARY KEY ,
     patient_id INT,
